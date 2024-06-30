@@ -1,6 +1,17 @@
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createApp, h } from 'vue'
 
+// PrimeVue
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura';
+import Listbox from 'primevue/listbox';
+import InputOtp from 'primevue/inputotp';
+import Chart from 'primevue/chart';
+import DatePicker from 'primevue/datepicker';
+
+// import Button from "primevue/button"
+
+
 createInertiaApp({
   // Set default page title
   // see https://inertia-rails.netlify.app/guide/title-and-meta
@@ -26,8 +37,18 @@ createInertiaApp({
   },
 
   setup({ el, App, props, plugin }) {
-    createApp({ render: () => h(App, props) })
+    const app = createApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(PrimeVue, {theme: {preset: Aura}})
+      .component('Listbox', Listbox)
+      .component('InputOtp', InputOtp)
+      .component('Chart', Chart)
+      .component('DatePicker', DatePicker)
       .mount(el)
+    
+    // const app = createApp(App);
+    // App.component('Button', Button);
+
   },
 })
+

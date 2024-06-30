@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@inertiajs/vue3": "^1.2.0",
+    "@primevue/themes": "^4.0.0-rc.3",
+    "chart.js": "^4.4.3",
+    "primevue": "^4.0.0-rc.3",
     "vue": "^3.4.31"
   }
 }
