@@ -55,4 +55,4 @@ end
 
 gem "vite_rails", "~> 3.0"
 
-gem "inertia_rails-contrib", "~> 0.1.1"
+gem "inertia_rails-contrib", "~> 0.2.1"
